@@ -11,52 +11,124 @@
     <header class="site-header">
         <div class="container">
             <h1>横浜駅通勤ガイド</h1>
-            <p>一人暮らし（1K/ワンルーム・約20m²）のための路線別考察</p>
+            <p>一人暮らし（1K/ワンルーム・約20m²）のための路線別ガチ考察</p>
         </div>
     </header>
 
     <main class="container">
-        <!-- 導入文 -->
+        <!-- はじめに（プロフィール・スタンス） -->
         <section class="intro-section">
-            <h2>このサイトについて</h2>
-            <p>横浜駅へ通勤する単身者のために、家賃相場、物価、そして地域の地形的な特徴までを踏まえたリアルな住みやすさを考察・紹介しています。</p>
+            <h2>はじめに（筆者のスタンス）</h2>
+            <p>みなとみらいエリアや横浜駅周辺への通勤にあたり、「どこに一人暮らしをしようか」「家賃や物価が安いエリアはないか」と悩んでいる方は多いのではないでしょうか。</p>
+            <p>本サイトでは、<strong>神奈川県相模原市在住歴2年</strong>の筆者が、単身者向け（1K/ワンルーム・占有面積20m²前後）の視点で、横浜駅アクセス路線の住みやすさを本音で紹介します。</p>
+            
+            <div class="author-note">
+                <p><strong>⚠️ あらかじめご了承ください</strong><br>
+                筆者は「都心に住む」よりも、<strong>「都心から30〜40kmほど離れた郊外に住み、家賃や物価を抑えつつ、部屋の広さと豊かな自然を確保したい」</strong>というタイプです。そのため、解説にはそのような主観や好みが含まれていますが、コストパフォーマンスを重視したい方の参考になれば幸いです。</p>
+            </div>
+        </section>
+
+        <!-- 横浜市の基本情報・地形コラム -->
+        <section class="intro-section terrain-section">
+            <h2>横浜市ってどんな街？（概要と地形のリアル）</h2>
+            <p>横浜市は面積 <b>438.23km²</b>、人口<b>約377.2万人</b>を擁する、日本最大の政令指定都市です。東京都心からは30～40km圏内とアクセスも良く、昼夜間人口比率は91.1とベッドタウンとしての性格を持ちながらも、京浜工業地帯の中核、IT、商業、観光業が高度に発達しています。</p>
+            
+            <div class="insight-box">
+                <h4>⚠️ 地形のトラップ：坂と共に生きる街</h4>
+                <p>横浜市の地形は、北西部に<strong>多摩丘陵</strong>、南部に<strong>三浦丘陵</strong>が連なっており、港湾部（平坦地）を除くと<strong>全体的に非常に起伏に富んだ地形</strong>をしています。そのため、基本的には「毎日坂を上り下りして生活する」環境になりやすく、住む場所によってはかなりの体力を要します。自転車移動を考えている方は電動アシストが必須レベルです。</p>
+            </div>
+
+            <p class="road-info"><strong>【道路・高速アクセス】</strong><br>
+            一般道は国道1号、15号、16号、246号、357号が走り、東京・小田原・町田・横須賀方面を網羅。市内を環状1〜4号線が結びます。高速道路も首都高、横浜横須賀道路、横浜新道、第三京浜、東名高速などが緻密に張り巡らされています。</p>
         </section>
 
         <!-- 路線セクション：東急東横線 -->
-        <section class="line-section">
+        <section class="line-section" id="toyoko">
             <h2>① 東急東横線</h2>
             
-            <!-- 路線図イメージ（srcは適宜変更してください） -->
-            <div class="route-map-container">
-                <img src="images/toyoko_line.png" alt="東急東横線 路線図" class="route-map-img">
+            <!-- タブ切り替えシステム -->
+            <div class="tab-wrapper">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="toyoko-route">🗺️ 路線図</button>
+                    <button class="tab-btn" data-tab="toyoko-market">💰 沿線相場図</button>
+                </div>
+                <div class="tab-contents">
+                    <div class="tab-content active" id="toyoko-route">
+                        <div class="img-container">
+                            <img src="img/route_map/tokyu_toyoko_route_map.png" alt="東急東横線 路線図" class="responsive-img">
+                        </div>
+                    </div>
+                    <div class="tab-content" id="toyoko-market">
+                        <div class="img-container">
+                            <img src="img/market_price/tokyu_toyoko_market_price.png" alt="東急東横線 家賃相場図" class="responsive-img">
+                            <p>出典: <a href="https://suumo.jp/chintai/soba/tokyo/en_tokyutoyokosen/">SUUMO 東急東横線 沿線家賃相場</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="line-summary">
-                <p>東急東横線は横浜駅からみなとみらい線に直通しており、みなとみらいエリアへのアクセスにも非常に便利です。渋谷方面へのアクセスも良いため、人気の高い路線です。</p>
-                <p>東急東横線の主要駅としては、菊名、武蔵小杉、自由が丘などが挙げられます。以下では、一人暮らし向けの視点から各駅についてまとめていきます。</p>
+                <p>横浜〜渋谷を結ぶ大人気路線。横浜高速鉄道みなとみらい線へ直通運転しているため、みなとみらいエリアへの通勤利便性は最強です。ただし、全体的に「高級路線」の毛色が強く、沿線の地価やスーパーの物価は高め。安く住みたい人には打診しにくいですが、ステータスや洗練された暮らしを求めるなら抜群の選択肢です。</p>
             </div>
 
-            <!-- 駅ごとの詳細 -->
             <div class="station-details">
+                <!-- 東白楽〜妙蓮寺 -->
                 <article class="station-card">
-                    <h3>菊名駅</h3>
+                    <h3>東白楽駅 〜 妙蓮寺駅（家賃穴場エリア）</h3>
                     <div class="station-meta">
-                        <span class="badge rent">家賃相場：低〜中</span>
-                        <span class="badge access">JR横浜線乗換可</span>
+                        <span class="badge rent">家賃：比較的控えめ</span>
+                        <span class="badge shop">買い物：最強（オーケー等）</span>
+                    </div>
+                    <div class="station-indicators">
+                        <div class="ind-row"><span>家賃の安さ</span><div class="bar-bg"><div class="bar-fill" style="width: 75%;"></div></div></div>
+                        <div class="ind-row"><span>物価の安さ</span><div class="bar-bg"><div class="bar-fill" style="width: 80%;"></div></div></div>
                     </div>
                     <div class="station-content">
-                        <p>特急や急行が停車する利便性の高い駅です。駅周辺は比較的起伏（坂道）がありますが、静かな住宅街が広がっています。20m²前後の1K物件も豊富で、東横線内では比較的コストパフォーマンスが良いエリアです。</p>
+                        <p>東横線内で安く抑えたいならこの区間がイチオシ。<strong>東白楽・白楽</strong>は近くに有名な「六角橋商店街」があり、食品館あおばや業務スーパーなど自炊派の味方が揃っています。JR東神奈川駅へも徒歩圏内で、イオンも使えて利便性は抜群。<strong>妙蓮寺</strong>には格安スーパーの代表格「オーケー」があるため、こちらも非常に食費を削りやすい環境です。</p>
                     </div>
                 </article>
 
+                <!-- 菊名 -->
+                <article class="station-card">
+                    <h3>菊名駅</h3>
+                    <div class="station-meta">
+                        <span class="badge access">JR横浜線乗換駅</span>
+                        <span class="badge terrain">地形：起伏あり</span>
+                    </div>
+                    <div class="station-indicators">
+                        <div class="ind-row"><span>交通の便</span><div class="bar-bg"><div class="bar-fill" style="width: 90%;"></div></div></div>
+                        <div class="ind-row"><span>周辺利便</span><div class="bar-bg"><div class="bar-fill" style="width: 40%;"></div></div></div>
+                    </div>
+                    <div class="station-content">
+                        <p>特急や急行が止まるため交通の便は抜群ですが、駅周辺にお店が少ない印象。スーパーはまいばすけっとやサミットがありますが若干高め。定期券内の別駅で買い物をする割り切りが必要かもしれません。少し歩きますが環状2号沿いの「MEGAドン・キホーテ新横浜店」を活用するのも手です。</p>
+                    </div>
+                </article>
+
+                <!-- 大倉山・綱島・日吉 -->
+                <article class="station-card">
+                    <h3>大倉山駅・綱島駅・日吉駅</h3>
+                    <div class="station-meta">
+                        <span class="badge recommend">筆者おすすめ</span>
+                        <span class="badge access">複数路線・始発あり</span>
+                    </div>
+                    <div class="station-content">
+                        <p><strong>大倉山</strong>は閑静な住宅街で、港北区役所や環状2号が近く落ち着いた雰囲気。一方、<strong>綱島と日吉は個人的に超おすすめエリア</strong>です。</p>
+                        <p><strong>日吉</strong>は慶應義塾大学がある学生街のため単身向けアパートの弾数が多く、地下鉄グリーンラインや目黒線（始発あり）も使えて超強力。<strong>綱島</strong>はスーパーの選択肢が多く、少し離れればアピタやイオンもあり生活が非常に完結しやすいです。<strong>元住吉</strong>まで行くと、駅前の商店街に程よい下町感がありここも住み心地が良いです。</p>
+                    </div>
+                </article>
+
+                <!-- 武蔵小杉 -->
                 <article class="station-card">
                     <h3>武蔵小杉駅</h3>
                     <div class="station-meta">
-                        <span class="badge rent">家賃相場：高</span>
-                        <span class="badge access">複数路線利用可</span>
+                        <span class="badge rent-high">家賃：高い</span>
+                        <span class="badge terrain">都会・タワマン</span>
+                    </div>
+                    <div class="station-indicators">
+                        <div class="ind-row"><span>コスパ</span><div class="bar-bg"><div class="bar-fill" style="width: 20%;"></div></div></div>
                     </div>
                     <div class="station-content">
-                        <p>再開発が進んだタワーマンション街として有名ですが、駅から少し離れると単身向けの古い物件なども点在します。利便性は抜群ですが、家賃相場は高めです。</p>
+                        <p>JR各線との接続駅で狂ったように便利ですが、周辺地価・賃料ともに高騰しており一人暮らしのコスパ重視派にはおすすめしません。グランツリーなどの商業施設も富裕層・ファミリー向けの高級志向なため、全体の物価も高めです。</p>
                     </div>
                 </article>
             </div>
@@ -64,32 +136,92 @@
 
         <hr class="section-divider">
 
-        <!-- 路線セクション：京急本線 -->
-        <section class="line-section">
-            <h2>② 京急本線</h2>
-            
-            <div class="route-map-container">
-                <img src="images/keikyu_line.png" alt="京急本線 路線図" class="route-map-img">
+        <!-- 路線セクション：京浜東北線 -->
+        <section class="line-section" id="keihintohoku">
+            <h2>② JR京浜東北線（根岸線直通）</h2>
+
+            <div class="tab-wrapper">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="keihintohoku-route">🗺️ 路線図</button>
+                    <button class="tab-btn" data-tab="keihintohoku-market">💰 沿線相場図</button>
+                </div>
+                <div class="tab-contents">
+                    <div class="tab-content active" id="keihintohoku-route">
+                        <div class="img-container">
+                            <img src="img/route_map/keihin-tohoku_negishi_route_map.png" alt="京浜東北線 路線図" class="responsive-img">
+                        </div>
+                    </div>
+                    <div class="tab-content" id="keihintohoku-market">
+                        <div class="img-container">
+                            <img src="img/market_price/keihin-tohoku_negishi_market_price.png" alt="京浜東北線 家賃相場図" class="responsive-img">
+                            <p>出典: <a href="https://suumo.jp/chintai/soba/tokyo/en_keihintohokusen/">SUUMO 京浜東北線 沿線家賃相場</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="line-summary">
-                <p>品川・羽田空港方面へのアクセスに優れた路線です。普通・急行・特急など、種別によって停車駅が大きく異なるため、運行ダイヤの把握がポイントになります。</p>
+                <p>大宮から東京、品川を経て横浜へと縦断する大動脈。本数が多く非常に便利ですが、通勤ラッシュの混雑は激しめです。東急東横線や京急本線とガッツリ並列して走っています。</p>
             </div>
 
             <div class="station-details">
+                <!-- 東神奈川・新子安 -->
                 <article class="station-card">
-                    <h3>横須賀中央駅（横須賀市エリア）</h3>
+                    <h3>東神奈川駅 〜 新子安駅</h3>
                     <div class="station-meta">
-                        <span class="badge rent">家賃相場：安</span>
-                        <span class="badge terrain">地形：谷戸（やと）</span>
+                        <span class="badge shop">買い物：良好</span>
+                        <span class="badge access">2路線利用可</span>
                     </div>
                     <div class="station-content">
-                        <p>横須賀市周辺は非常に山がちであり、<strong>「谷戸（やと）」</strong>と呼ばれる特有の谷状の地形が広がっているのが特徴です。</p>
-                        <p>駅から離れた平地が少ないエリアや坂の上、階段を上るような立地では、占有面積20m²前後の1K・ワンルーム物件がかなり安価に借りられる傾向にあります。物価も比較的安めですが、毎日の通勤における「高低差」への慣れが選択の分かれ道となります。</p>
+                        <p><strong>東神奈川</strong>は駅前に大型商業施設「イオン」があり買い物環境が完成しています。京急（京急東神奈川駅）も至近で実質2路線利用可能、さらに横浜線始発駅なので新横浜や町田方面へ座ってアクセスできる隠れた強駅です。<strong>新子安</strong>は駅近くに激安の「オーケー」があるため、自炊派の食費を大幅にセーブできます。少し歩けば大口通商店街も使えます。</p>
+                    </div>
+                </article>
+
+                <!-- 鶴見 -->
+                <article class="station-card">
+                    <h3>鶴見駅</h3>
+                    <div class="station-meta">
+                        <span class="badge access">都心アクセス◎</span>
+                        <span class="badge rent">家賃：中</span>
+                    </div>
+                    <div class="station-content">
+                        <p>横浜と川崎の中間に位置し、東京・品川方面へのアクセスも良い極めて優秀なベッドタウン。京急鶴見駅も歩けます。鶴見線も分岐していますが、あちらは完全な工業地帯なので居住用としてはややハードルが高め。鶴見駅周辺の平坦エリアを探すのが無難でバランスが良いです。</p>
+                    </div>
+                </article>
+
+                <!-- 川崎 -->
+                <article class="station-card">
+                    <h3>川崎駅（および南武線乗り換え）</h3>
+                    <div class="station-meta">
+                        <span class="badge terrain">東口：繁華街</span>
+                        <span class="badge recommend">西口：おすすめ</span>
+                    </div>
+                    <div class="station-content">
+                        <p>川崎は東西で街の性格が180度変わります。<strong>東口</strong>は大規模な繁華街で利便性は高いですが、騒がしく治安面も考慮すると一人暮らしの居住エリアとしては少しハード。一方、<strong>西口</strong>は「ラゾーナ川崎」などの先進的な商業施設を抜けると比較的落ち着いた環境になります。</p>
+                        <p>💡 <strong>裏ワザ</strong>：川崎からJR南武線に一駅二駅入り、<strong>尻手駅</strong>や<strong>矢向駅</strong>の周辺で物件を探すと、家賃を抑えつつ川崎経由で横浜へ快適にアプローチできるため狙い目です。</p>
                     </div>
                 </article>
             </div>
         </section>
+
+        <hr class="section-divider">
+
+        <!-- 💡 今後追記していくためのテンプレート（非表示にしたい場合は削除するか、書き換えてください） -->
+        <section class="line-section予定">
+            <div class="future-routes-box">
+                <h3>今後、以下の路線も随時考察を追加予定！</h3>
+                <ul class="future-list">
+                    <li><strong>横須賀線</strong>（保土ケ谷・東戸塚・大船方面、鎌倉・逗子への自然アクセス）</li>
+                    <li><strong>根岸線</strong>（関内・磯子・洋光台方面、坂は多いが下町感と安さのトレードオフ）</li>
+                    <li><strong>東海道本線</strong>（戸塚・藤沢・小田原方面、圧倒的速達性と郊外の広さ確保）</li>
+                    <li><strong>京急本線</strong>（戸部・上大岡〜横須賀方面、谷戸地形と爆速快特のリアル）</li>
+                    <li><strong>相鉄本線</strong>（星川・二俣川・大和〜海老名方面、直通線開通で大化けした注目株）</li>
+                    <li><strong>横浜市営地下鉄ブルーライン</strong>（三ツ沢・港北ニュータウン・戸塚方面）</li>
+                </ul>
+            </div>
+        </section>
+
+        <p>路線図画像の出典: <a href="https://nextaxio.com/create-area-map-jp.php?p1=14" >神奈川県内を走る40路線を強調して鉄道路線図を作成する</a></p>
     </main>
 
     <footer class="site-footer">
