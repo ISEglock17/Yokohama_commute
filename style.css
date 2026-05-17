@@ -1,0 +1,229 @@
+/* ==========================================================================
+   ベーススタイル
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   ヘッダー・フッター
+   ========================================================================== */
+.site-header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.site-header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.site-header p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   メインコンテンツ
+   ========================================================================== */
+.intro-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.intro-section h2 {
+    font-size: 1.3rem;
+    color: #1e3c72;
+    margin-bottom: 10px;
+    border-left: 4px solid #1e3c72;
+    padding-left: 10px;
+}
+
+.line-section {
+    margin-bottom: 40px;
+}
+
+/* 各路線の見出し（h2） */
+.line-section h2 {
+    font-size: 1.6rem;
+    color: #1e3c72;
+    background-color: #e9ecef;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+/* 路線図のコンテナ */
+.route-map-container {
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.route-map-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 路線の概要文 */
+.line-summary {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    border-left: 5px solid #6c757d;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.line-summary p {
+    margin-bottom: 10px;
+}
+.line-summary p:last-child {
+    margin-bottom: 0;
+}
+
+/* 区切り線 */
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: #dee2e6;
+    margin: 50px 0;
+}
+
+/* ==========================================================================
+   駅ごとの詳細カード（h3まわり）
+   ========================================================================== */
+.station-details {
+    display: grid;
+    gap: 25px;
+}
+
+.station-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.station-card h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #2a5298;
+    display: inline-block;
+}
+
+/* バッジ（家賃や特徴のタグ） */
+.station-meta {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.badge.rent { background-color: #e3f2fd; color: #0d47a1; }
+.badge.access { background-color: #e8f5e9; color: #1b5e20; }
+.badge.terrain { background-color: #fff3e0; color: #e65100; }
+
+.station-content p {
+    margin-bottom: 12px;
+}
+.station-content p:last-child {
+    margin-bottom: 0;
+}
+
+.station-content strong {
+    color: #e65100;
+    background: linear-gradient(transparent 70%, #ffe0b2 70%);
+}
+
+/* ==========================================================================
+   動的パーツ（JS用）
+   ========================================================================== */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: #2a5298;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1000;
+}
+
+.scroll-top-btn.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top-btn:hover {
+    background-color: #1e3c72;
+}
+
+/* ==========================================================================
+   メディアクエリ（レスポンシブ）
+   ========================================================================== */
+@media (max-width: 768px) {
+    .site-header h1 {
+        font-size: 1.6rem;
+    }
+    .station-card {
+        padding: 15px;
+    }
+}

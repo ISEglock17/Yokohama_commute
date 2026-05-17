@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>横浜駅への通勤ガイド | 一人暮らし向け路線・駅考察</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <h1>横浜駅通勤ガイド</h1>
+            <p>一人暮らし（1K/ワンルーム・約20m²）のための路線別考察</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 導入文 -->
+        <section class="intro-section">
+            <h2>このサイトについて</h2>
+            <p>横浜駅へ通勤する単身者のために、家賃相場、物価、そして地域の地形的な特徴までを踏まえたリアルな住みやすさを考察・紹介しています。</p>
+        </section>
+
+        <!-- 路線セクション：東急東横線 -->
+        <section class="line-section">
+            <h2>① 東急東横線</h2>
+            
+            <!-- 路線図イメージ（srcは適宜変更してください） -->
+            <div class="route-map-container">
+                <img src="images/toyoko_line.png" alt="東急東横線 路線図" class="route-map-img">
+            </div>
+
+            <div class="line-summary">
+                <p>東急東横線は横浜駅からみなとみらい線に直通しており、みなとみらいエリアへのアクセスにも非常に便利です。渋谷方面へのアクセスも良いため、人気の高い路線です。</p>
+                <p>東急東横線の主要駅としては、菊名、武蔵小杉、自由が丘などが挙げられます。以下では、一人暮らし向けの視点から各駅についてまとめていきます。</p>
+            </div>
+
+            <!-- 駅ごとの詳細 -->
+            <div class="station-details">
+                <article class="station-card">
+                    <h3>菊名駅</h3>
+                    <div class="station-meta">
+                        <span class="badge rent">家賃相場：低〜中</span>
+                        <span class="badge access">JR横浜線乗換可</span>
+                    </div>
+                    <div class="station-content">
+                        <p>特急や急行が停車する利便性の高い駅です。駅周辺は比較的起伏（坂道）がありますが、静かな住宅街が広がっています。20m²前後の1K物件も豊富で、東横線内では比較的コストパフォーマンスが良いエリアです。</p>
+                    </div>
+                </article>
+
+                <article class="station-card">
+                    <h3>武蔵小杉駅</h3>
+                    <div class="station-meta">
+                        <span class="badge rent">家賃相場：高</span>
+                        <span class="badge access">複数路線利用可</span>
+                    </div>
+                    <div class="station-content">
+                        <p>再開発が進んだタワーマンション街として有名ですが、駅から少し離れると単身向けの古い物件なども点在します。利便性は抜群ですが、家賃相場は高めです。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- 路線セクション：京急本線 -->
+        <section class="line-section">
+            <h2>② 京急本線</h2>
+            
+            <div class="route-map-container">
+                <img src="images/keikyu_line.png" alt="京急本線 路線図" class="route-map-img">
+            </div>
+
+            <div class="line-summary">
+                <p>品川・羽田空港方面へのアクセスに優れた路線です。普通・急行・特急など、種別によって停車駅が大きく異なるため、運行ダイヤの把握がポイントになります。</p>
+            </div>
+
+            <div class="station-details">
+                <article class="station-card">
+                    <h3>横須賀中央駅（横須賀市エリア）</h3>
+                    <div class="station-meta">
+                        <span class="badge rent">家賃相場：安</span>
+                        <span class="badge terrain">地形：谷戸（やと）</span>
+                    </div>
+                    <div class="station-content">
+                        <p>横須賀市周辺は非常に山がちであり、<strong>「谷戸（やと）」</strong>と呼ばれる特有の谷状の地形が広がっているのが特徴です。</p>
+                        <p>駅から離れた平地が少ないエリアや坂の上、階段を上るような立地では、占有面積20m²前後の1K・ワンルーム物件がかなり安価に借りられる傾向にあります。物価も比較的安めですが、毎日の通勤における「高低差」への慣れが選択の分かれ道となります。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 横浜駅通勤ガイド. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ページトップへ戻るボタン -->
+    <button id="js-scroll-top" class="scroll-top-btn" aria-label="ページトップへ戻る">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
